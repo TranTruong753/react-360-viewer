@@ -15,7 +15,7 @@ function OverViewPage() {
   }
 
   const handleOpenPopup = () => {
-     return setOverPlay(true)
+    return setOverPlay(true)
   }
 
   const handleToggleMenu = () => {
@@ -26,13 +26,11 @@ function OverViewPage() {
       {/* viewer 360 */}
       <Viewer360 />
 
-      {/* OverPlay  + Guilde*/}
-      <OverPlayGuide overPlay={overPlay} onClose={handleTurnOffOverPlay}>
-
-      </OverPlayGuide>
-
       {/* Menu container */}
       <BottomMenu openMenu={openMenu} onToggle={handleToggleMenu} overPlay={overPlay} onOpenPopup={handleOpenPopup} />
+
+      {/* OverPlay  + Guilde*/}
+      <OverPlayGuide overPlay={overPlay} onClose={handleTurnOffOverPlay}/>
 
     </div>
   );

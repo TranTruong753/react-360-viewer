@@ -20,10 +20,10 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
             <nav className={
                 cn(
                     'transition-all duration-300 flex items-center max-w-[90%] w-full h-full  bg-[#5fcd6f] backdrop-blur-xs rounded-2xl ',
-                    openMenu ? '-translate-y-6' : 'translate-y-full',
+                    openMenu ? '-translate-y-4 md:-translate-y-6' : 'translate-y-full',
                 )
             }>
-                <button onClick={onOpenPopup} className=" w-full h-full cursor-pointer">
+                <button onClick={onOpenPopup} className=" cursor-pointer min-w-20 min-h-20 md:w-full md:h-full">
                     <img
                         className="object-contain h-full w-full p-1"
                         alt="logo"
@@ -54,9 +54,8 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                             className="fill-inherit group-hover:fill-[#5fcd6f]">
                         </path>
                     </svg>
-                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
-                        toàn cảnh
-                    </span>
+
+                    <TitleMenu title="toàn cảnh" />
 
                 </NavLink>
 
@@ -98,9 +97,7 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                         />
                     </svg>
 
-                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
-                        vị trí
-                    </span>
+                    <TitleMenu title="vị trí" />
                 </NavLink>
 
                 <NavLink to="/subdivision" end
@@ -256,11 +253,10 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                             strokeLinecap="round"
                             strokeLinejoin="round"
                         />
-                    </svg>
+                    </svg>            
 
-                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
-                        tiện ích
-                    </span>
+                    <TitleMenu title="tiện ích" />
+
                 </NavLink>
 
                 <NavLink to="/gallery" end
@@ -300,10 +296,7 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                             strokeLinejoin="round"
                         />
                     </svg>
-
-                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
-                        gallery
-                    </span>
+                    <TitleMenu title="gallery" />
                 </NavLink>
 
                 <NavLink to="/ebrochure" end
@@ -325,10 +318,8 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                             className="stroke-2 stroke-inherit"
                         />
                     </svg>
-
-                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
-                        ebrochure
-                    </span>
+                    
+                    <TitleMenu title="ebrochure" />
                 </NavLink>
 
             </nav>
@@ -337,7 +328,7 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
             <button onClick={onToggle}
                 className={
                     cn(
-                        "absolute bottom-0  h-6  px-10 md:px-16 bg-[#5fcd6f]/85 hover:bg-[#5fcd6f]  cursor-pointer transition-transform duration-300",
+                        "absolute bottom-0  h-4 md:h-6  px-10 md:px-16 bg-[#5fcd6f]/85 hover:bg-[#5fcd6f]  cursor-pointer transition-transform duration-300",
                         openMenu ? 'rounded-b-xl' : 'rounded-t-xl'
                     )
                 }>
@@ -352,6 +343,14 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
 
         </div>
     );
+}
+
+function TitleMenu({ title }: { title: string }) {
+    return (
+        <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
+            {title}
+        </span>
+    )
 }
 
 export default BottomMenu;

@@ -98,8 +98,9 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                         />
                     </svg>
 
-                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs-8 lg:text-xs text-center uppercase  ">vị trí</span>
-
+                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
+                        vị trí
+                    </span>
                 </NavLink>
 
                 <NavLink to="/subdivision" end
@@ -122,8 +123,9 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                         />
                     </svg>
 
-                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs-8 lg:text-xs text-center uppercase  ">phân khu</span>
-
+                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
+                        phân khu
+                    </span>
                 </NavLink>
 
                 <NavLink to="/utilities" end
@@ -256,8 +258,9 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                         />
                     </svg>
 
-                    <span className="hidden lg:block text-inherit  group-[.active]:block group-hover:text-[#5fcd6f] text-xs-8 lg:text-xs text-center uppercase  ">tiện ích</span>
-
+                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
+                        tiện ích
+                    </span>
                 </NavLink>
 
                 <NavLink to="/gallery" end
@@ -298,8 +301,9 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                         />
                     </svg>
 
-                    <span className="hidden lg:block text-inherit group-active:block group-hover:text-[#5fcd6f] text-xs-8 lg:text-xs text-center uppercase  ">gallery</span>
-
+                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
+                        gallery
+                    </span>
                 </NavLink>
 
                 <NavLink to="/ebrochure" end
@@ -322,8 +326,9 @@ function BottomMenu({ openMenu, onToggle, overPlay, onOpenPopup }: BottomMenuCom
                         />
                     </svg>
 
-                    <span className="hidden lg:block text-inherit group-active:block group-hover:text-[#5fcd6f] text-xs-8 lg:text-xs text-center uppercase  ">ebrochure</span>
-
+                    <span className="hidden lg:block text-inherit group-[.active]:block group-hover:text-[#5fcd6f] text-xs sm:text-md lg:text-lg text-nowrap">
+                        ebrochure
+                    </span>
                 </NavLink>
 
             </nav>
